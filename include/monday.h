@@ -43,21 +43,26 @@ void selfServiceCheckout(void) {
   int i = 0;
   int quantity;
   float cost = 0.0;
+  float subTotal = 0.0;
+  const float tax = 5.5;
   do{
-     i++;
-    std::cout<<"Please enter a quantity for item " << i <<" (or 0 to finish): \n";    
-    std::cin >> quantity;
+      i++;
+      std::cout<<"Please enter a quantity for item " << i <<" (or 0 to finish): \n";    
+      std::cin >> quantity;
 
-    if(quantity > 0){
+      if(quantity > 0){
       std::cout<<"Please enter item " << i <<" cost: \n";
       std::cin >> cost;
-    }
+      subTotal = subTotal + (quantity * cost);
+
+      }
     
   }
   while(quantity > 0);
 
-  if(quantity == 0){
-    std::cout<< "\n Thank you. \n";
-  }  
+  
+  std::cout<< "Thank you. \n";
+  std::cout<< "Subtotal: "<< subTotal << std::endl;
+    
 }
 
