@@ -1,4 +1,10 @@
+float fToC(float f){
+  return ((f - 32) * 5 / 9);
+}
 
+float cToF(float c){
+  return ((c * 9 / 5) + 32);
+}
 
 void fahrenheitCentigradeConversion(void) {
   std::string temperature;
@@ -11,8 +17,6 @@ void fahrenheitCentigradeConversion(void) {
   
   std::getline(std::cin,temperature);
 
-  std::cout << "You entered: "<< temperature << std::endl;
-
   std::cout << "Press C to convert from Fahrenheit to Celsius \n";
   std::cout << "Press F to convert from Celsius to Fahrenheit \n";
   
@@ -20,14 +24,14 @@ void fahrenheitCentigradeConversion(void) {
   t = stof(temperature);
 
   if (option == 'c' || option == 'C'){
-    std::cout << "Your choice: " << option;    
-    c = (t - 32) * 5 / 9;
-    std::cout<<"\n" << t <<" Fahrenheit is " << c << " degrees";
+    std::cout << "Your choice: " << option;
+    c = fToC(t);
+    std::cout<<"\n" << t <<" Fahrenheit is " << c << " degrees\n";
 
   }else if (option == 'f' || option == 'F'){
     std::cout << "Your choice: " << option; 
-    f = (t * 9 / 5) + 32;
-     std::cout<<"\n" << t <<" degrees is " << f << " Fahrenheit";
+    f = cToF(t);
+     std::cout<<"\n" << t <<" degrees is " << f << " Fahrenheit\n";
   }else{
     std::cout << "please enter valid \n";
   }  
