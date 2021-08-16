@@ -45,6 +45,7 @@ void selfServiceCheckout(void) {
   float cost = 0.0;
   float subTotal = 0.0;
   const float tax = 5.5;
+  float shoppingTax = 0.0;
   do{
       i++;
       std::cout<<"Please enter a quantity for item " << i <<" (or 0 to finish): \n";    
@@ -62,7 +63,13 @@ void selfServiceCheckout(void) {
 
   
   std::cout<< "Thank you. \n";
-  std::cout<< "Subtotal: "<< subTotal << std::endl;
+  std::cout<< "Subtotal: "<< subTotal;
+  shoppingTax = (subTotal * tax)/100;
+  std::cout << "\n Shopping tax: "<< shoppingTax;
+
+
+
+
     
 }
 
