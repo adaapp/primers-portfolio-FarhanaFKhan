@@ -46,6 +46,8 @@ void selfServiceCheckout(void) {
   float subTotal = 0.0;
   const float tax = 5.5;
   float shoppingTax = 0.0;
+  float total = 0.0;
+
   do{
       i++;
       std::cout<<"Please enter a quantity for item " << i <<" (or 0 to finish): \n";    
@@ -55,19 +57,19 @@ void selfServiceCheckout(void) {
       std::cout<<"Please enter item " << i <<" cost: \n";
       std::cin >> cost;
       subTotal = subTotal + (quantity * cost);
-
-      }
-    
+      }    
   }
   while(quantity > 0);
-
   
   std::cout<< "Thank you. \n";
-  std::cout<< "Subtotal: "<< subTotal;
+
+  std::cout<< "\nSubtotal: "<< subTotal;
+
   shoppingTax = (subTotal * tax)/100;
-  std::cout << "\n Shopping tax: "<< shoppingTax;
+  std::cout << "\nShopping tax: "<< shoppingTax;
 
-
+  total = subTotal + shoppingTax;
+  std::cout << "\nTotal: "<< total<<std::endl; 
 
 
     
