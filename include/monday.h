@@ -39,6 +39,25 @@ void fahrenheitCentigradeConversion(void) {
 
 
 void selfServiceCheckout(void) {
-	std::cout << " - selfServiceCheckout: not yet implemented\n\n";
+	//std::cout << " - selfServiceCheckout: not yet implemented\n\n";
+  int i = 0;
+  int quantity;
+  float cost = 0.0;
+  do{
+     i++;
+    std::cout<<"Please enter a quantity for item " << i <<" (or 0 to finish): \n";    
+    std::cin >> quantity;
+
+    if(quantity > 0){
+      std::cout<<"Please enter item " << i <<" cost: \n";
+      std::cin >> cost;
+    }
+    
+  }
+  while(quantity > 0);
+
+  if(quantity == 0){
+    std::cout<< "\n Thank you. \n";
+  }  
 }
 
