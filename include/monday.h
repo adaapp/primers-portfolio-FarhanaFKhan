@@ -41,7 +41,6 @@ void fahrenheitCentigradeConversion(void) {
 
 
 void selfServiceCheckout(void) {
-	//std::cout << " - selfServiceCheckout: not yet implemented\n\n";
   int i = 0;
   int quantity;
   float cost = 0.0;
