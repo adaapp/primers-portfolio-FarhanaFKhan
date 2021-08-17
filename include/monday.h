@@ -1,3 +1,5 @@
+#include <iomanip> 
+
 float fToC(float f){
   return ((f - 32) * 5 / 9);
 }
@@ -66,10 +68,10 @@ void selfServiceCheckout(void) {
   std::cout<< "\nSubtotal: "<< subTotal;
 
   shoppingTax = (subTotal * tax)/100;
-  std::cout << "\nShopping tax: "<< shoppingTax;
+  std::cout << "\nShopping tax: "<< std::setprecision(2) << shoppingTax;
 
   total = subTotal + shoppingTax;
-  std::cout << "\nTotal: "<< total<<std::endl; 
+  std::cout << "\nTotal: "<< std::fixed << total <<std::endl; 
 
 
     
