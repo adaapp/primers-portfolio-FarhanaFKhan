@@ -4,19 +4,18 @@ void passwordComplexityChecker(void) {
 
 
 
-//helper function to find whether the name exists in the employeeListRemoval
-// int getIndex(std::vector<std::string> emp, std::string name){
-//   int it = std::find(emp.cbegin(), emp.cend(), name);
-//   std::cout << it;
-//   //if the name is found
-//   if(it != emp.cend()){
-//     int index = std::distance(emp.cbegin(),it);
-//     return index;
-//   }else{
-//     //if not found
-//     return -1;
-//   }
-// }
+//helper function to find whether the name exists in the employee list
+int getIndex(std::vector<std::string> emp, std::string name){
+  auto it = std::find(emp.cbegin(), emp.cend(), name);
+  //if the name is found
+  if(it != emp.cend()){
+    int index = std::distance(emp.cbegin(),it);
+    return index;
+  }else{
+    //if not found
+    return -1;
+  }
+}
 
 void employeeListRemoval(void) {
 	
@@ -25,7 +24,7 @@ void employeeListRemoval(void) {
   int indexOfEmp;
 
   std::vector<std::string> employees = {"John Smith", "Jaelynn Stuart", "Kaley Barajas","Walter Collier", "Cale Myers"};
-  
+
   std::cout << "There are " << employees.size() << " employess:\n";
   for(int i; i <employees.size(); i++){
     std::cout << employees[i] << "\n";
@@ -34,15 +33,21 @@ void employeeListRemoval(void) {
   std::cout << "Enter an employee name to remove: ";
   std::getline(std::cin,employeeToRemove);
 
-  for(int i = 0; i < employees.size(); i++){
-    if(employees[i] == employeeToRemove){
-      employees.erase(employees.cbegin()+i);
-    }
-  } 
+  indexOfEmp = getIndex(employees, employeeToRemove);
 
-  std::cout << "There are " << employees.size() << " employess:\n";
-  for(int i; i <employees.size(); i++){
+  if(indexOfEmp < 0){
+    std::cout << "Record not found! \n";
+  }else{
+    for(int i = 0; i < employees.size(); i++){
+      if(employees[i] == employeeToRemove){
+      employees.erase(employees.cbegin()+i);
+      }
+    }
+    std::cout << "There are " << employees.size() << " employess:\n";
+    for(int i; i <employees.size(); i++){
     std::cout << employees[i] << "\n";
+    }
   }
+  
 
 }
