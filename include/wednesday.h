@@ -1,5 +1,13 @@
-
-//read function to read data from the file phonedirectory.csv
+bool fileExists(std::string filename){
+  struct stat buf;
+  if(stat(filename.c_str(), &buf) == 0){
+    std::cout <<"\nsize: " << buf.st_size;
+    std::cout <<"\nmodified: " << ctime(&buf.st_mtime);
+    return true;
+  }
+  return false;
+}
+//read function to read data from the file phonedirectory.csv and search
 void read(std::string file, std::string& searchTerm){
   std::string line;
   std::ifstream fileObject;
@@ -9,6 +17,11 @@ void read(std::string file, std::string& searchTerm){
   int lineNumber;
   bool found = false;
   std::string recordFound;
+
+  //Error handling
+  if(!fileExists(file)){
+    std::cout << "\nInvalid file!"<<std::endl;
+  }
 
   fileObject.open(file);
 
@@ -26,7 +39,7 @@ void read(std::string file, std::string& searchTerm){
 
     //check if the the full name, first name or telephone number exists
     //TODO: check for same first names
-    
+
     if(fullName == searchTerm || firstName == searchTerm || phoneNumber == searchTerm){
       found = true;
       recordFound = line;
