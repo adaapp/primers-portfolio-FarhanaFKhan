@@ -66,5 +66,48 @@ void phoneDirectory(void) {
 
 
 void dataFileParser(void) {
-	std::cout << " - dataFileParser: not yet implemented\n\n";
+  std::string line;
+  std::ifstream fileObject;
+  std::string file = "employeedata.csv";
+  std::string fname;
+  std::vector<char> initial;
+  std::string sname;
+  std::vector<std::string> surname;
+  int tempSalary;
+  std::vector<int> salary;
+  int maxNameLength = 0;
+
+  if(!fileExists(file)){
+    std::cout << "\nInvalid file!"<<std::endl;
+  }
+
+
+  fileObject.open(file);
+  while(!fileObject.eof()){
+    getline(fileObject,line);
+    std::stringstream iss(line);
+    std::getline(iss, fname, ',');
+    std::getline(iss, sname, ',');
+    iss >> tempSalary;
+    initial.push_back(fname[0]);
+    surname.push_back(sname);
+    salary.push_back(tempSalary);
+    //std::cout << "\n" << tempSalary;
+  }
+  //find the longest last name for setw parameter. so it doesnt need to be hard coded
+  for(int i = 0; i < surname.size(); i++){
+    int tempLength = 0;
+    tempLength = surname[i].length();
+    if(tempLength > maxNameLength){
+      maxNameLength = tempLength;
+    }
+  }
+  //std::cout << "Max length: " << maxNameLength<< std::endl;
+
+  std::cout << "Initial " << std::setw(12) << "Last" << std::setw(12) << "Salary\n";
+  std::cout << "-------"<< std::setw(14)<< "-------"<< std::setw(14)<< "-------\n";
+  for(int i = 0; i < initial.size(); i++){
+    std::cout << "\n" << initial[i] << "." <<"\t\t\t"<<std::setw(maxNameLength) << surname[i] << std::setw(12)<<"£"<<salary[i];
+  }
+	
 }
