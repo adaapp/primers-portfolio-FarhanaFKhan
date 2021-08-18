@@ -7,20 +7,26 @@
 void read(std::string file, std::string& searchTerm){
   std::string line;
   std::ifstream fileObject;
-  std::string name;
+  std::string fullName;
+  std::string firstName;
   std::string phoneNumber;
   int lineNumber;
   bool found = false;
   std::string recordFound;
 
   fileObject.open(file);
+
   while(!fileObject.eof()){
     getline(fileObject,line);
     lineNumber++;
+    //use stringstream to parse the csv. used stringstream twice to first parse full name and phone number and then to get the first name
     std::stringstream iss(line);
-    std::getline(iss, name, ',');
-    if(name == searchTerm){
-      //std::cout <<"\n" << line << std::endl;
+    std:: stringstream ss(line);
+    std::getline(iss, fullName, ',');
+    std::getline(iss, phoneNumber);
+    ss >> firstName;
+    //check if the the full name, first name or telephone number exists
+    if(fullName == searchTerm || firstName == searchTerm || phoneNumber == searchTerm){
       found = true;
       recordFound = line;
     }    
