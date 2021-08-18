@@ -1,7 +1,3 @@
-//helper function to search
-
-
-
 
 //read function to read data from the file phonedirectory.csv
 void read(std::string file, std::string& searchTerm){
@@ -19,13 +15,18 @@ void read(std::string file, std::string& searchTerm){
   while(!fileObject.eof()){
     getline(fileObject,line);
     lineNumber++;
+
     //use stringstream to parse the csv. used stringstream twice to first parse full name and phone number and then to get the first name
+
     std::stringstream iss(line);
     std:: stringstream ss(line);
     std::getline(iss, fullName, ',');
     std::getline(iss, phoneNumber);
     ss >> firstName;
+
     //check if the the full name, first name or telephone number exists
+    //TODO: check for same first names
+    
     if(fullName == searchTerm || firstName == searchTerm || phoneNumber == searchTerm){
       found = true;
       recordFound = line;
