@@ -104,7 +104,7 @@ void dataFileParser(void) {
   }
   //std::cout << "Max length: " << maxNameLength<< std::endl;
 
-  std::cout << "Initial " << std::setw(12) << "Last" << std::setw(12) << "Salary\n";
+  std::cout << "Initial " << std::setw(12) << "Last" << std::setw(14) << "Salary\n";
   std::cout << "-------"<< std::setw(14)<< "-------"<< std::setw(14)<< "-------\n";
   for(int i = 0; i < initial.size(); i++){
     std::cout << "\n" << initial[i] << "." <<"\t\t\t"<<std::setw(maxNameLength) << surname[i] << std::setw(12)<<"£"<<salary[i];
