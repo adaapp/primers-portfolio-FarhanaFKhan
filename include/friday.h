@@ -5,8 +5,6 @@
 
 class Car {
   private:
-  const std::string DEFAULT_COLOUR = "Black";
-
   std::string car_colour;
   std::string car_make;
   bool is_engine_on;
@@ -19,6 +17,12 @@ class Car {
     set_make();
     engine_off();
     locked(false);
+  }
+
+  Car(std::string colour, std::string make) {
+    std::cout <<"\nCreated with params";
+    set_colour(colour);
+    set_make(make);
   }
   ~Car() {
     std::cout <<"\nDestroyed";
@@ -83,7 +87,7 @@ class Car {
 
 //primer 9
 void carClass(void) {
-		Car new_car;
+		Car new_car("Blue","Honda");
     new_car.status();
 }
 
