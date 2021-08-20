@@ -9,8 +9,8 @@ class Car {
 
   std::string car_colour;
   std::string car_make;
-  bool is_engine_on = false;
-  bool is_locked = false;
+  bool is_engine_on;
+  bool is_car_locked;
 
   public:
   Car() {
@@ -18,6 +18,7 @@ class Car {
     set_colour();
     set_make();
     engine_off();
+    locked(false);
   }
   ~Car() {
     std::cout <<"\nDestroyed";
@@ -55,17 +56,32 @@ class Car {
     }
   }
 
+  void locked(bool is_locked) {
+    if(is_locked) {
+      is_car_locked = true;
+    } else {
+      is_car_locked = false;
+    }
+
+  }
+
   void status(void) {
     std::string engine_status = "Off";
+    std::string lock_status = "Unlocked";
+
     if(is_engine_on){
       engine_status = "On";
     }
-    std::cout <<"\nCar Status: color: " << car_colour << " , make: " << car_make << " ,engine : " << engine_status;
+
+    if(is_car_locked) {
+      lock_status = "locked";
+    }
+    std::cout <<"\nCar Status: color: " << car_colour << " , make: " << car_make << " , engine : " << engine_status << " , " << lock_status;
   }
   
 };
 
-
+//primer 9
 void carClass(void) {
 		Car new_car;
     new_car.status();
