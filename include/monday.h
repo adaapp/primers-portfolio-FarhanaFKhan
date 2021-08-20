@@ -1,13 +1,14 @@
-#include <iomanip> 
-
+//helper function to convert Fahrenheit to C
 float fToC(float f){
   return ((f - 32) * 5 / 9);
 }
 
+//helper function to convert Celsius to F
 float cToF(float c){
   return ((c * 9 / 5) + 32);
 }
 
+//Primer 1
 void fahrenheitCentigradeConversion(void) {
   std::string temperature;
   char option;
@@ -39,7 +40,7 @@ void fahrenheitCentigradeConversion(void) {
   }  
 }
 
-
+//Primer 2
 void selfServiceCheckout(void) {
   int i = 0;
   int quantity;
