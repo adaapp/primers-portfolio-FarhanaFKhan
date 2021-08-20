@@ -8,7 +8,7 @@ class Car {
   std::string car_colour;
   std::string car_make;
   bool is_engine_on;
-  bool is_car_locked;
+  bool is_car_locked = false;
 
   public:
   Car() {
@@ -16,14 +16,11 @@ class Car {
     set_colour();
     set_make();
     engine_off();
-    locked(false);
   }
 
   Car(std::string colour, std::string make) {
-    std::cout <<"\nCreated with params";
     set_colour(colour);
     set_make(make);
-    locked(false);
   }
   ~Car() {
     std::cout <<"\nDestroyed";
@@ -63,10 +60,16 @@ class Car {
   }
 
   void locked(bool is_locked) {
-    if(is_locked) {
+    if(is_locked && !is_car_locked) { //want to lock the unlocked car
       is_car_locked = true;
-    } else {
+      std::cout << "\nThe car is locked\n";
+    } else if(is_locked && is_car_locked) { //trying to lock already locked car
+      std::cout << "\nSorry,the car is alreay locked\n";
+    } else if(!is_locked && is_car_locked) { // want to unlock the locked car
       is_car_locked = false;
+      std::cout << "\nThe car is unlocked\n";
+    } else {
+      std::cout << "\nSorry, the car is already unlocked\n";
     }
 
   }
@@ -97,7 +100,11 @@ void carClass(void) {
   do {
     new_car.status(); //display status of the car
     //interactive menu
-    std::cout << "\n1. Turn Engine On \n2. Turn Engine Off \n3. Lock Car \n4. Unlock Car \nPlease selet an option(or 0 to finish): ";
+    std::cout << "\n1. Turn Engine On";
+    std::cout << "\n2. Turn Engine Off";
+    std::cout << "\n3. Lock Car";
+    std::cout << "\n4. Unlock Car";
+    std::cout << "\nPlease selet an option(or 0 to finish): ";
     std::cin >> option_string; 
 
     option = stoi(option_string);
