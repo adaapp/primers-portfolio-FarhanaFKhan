@@ -23,6 +23,7 @@ class Car {
     std::cout <<"\nCreated with params";
     set_colour(colour);
     set_make(make);
+    locked(false);
   }
   ~Car() {
     std::cout <<"\nDestroyed";
@@ -46,9 +47,10 @@ class Car {
 
   void engine_on(void) {
     if(is_engine_on) {
-      std::cout << "\nSorry the engine is already on";
+      std::cout << "\nSorry the engine is already on\n";
     } else {
       is_engine_on = true;
+      std::cout << "\nTurning the engine on\n";
     }    
   }
 
@@ -56,7 +58,7 @@ class Car {
     if(is_engine_on) {
       is_engine_on = false;
     } else {
-      std::cout << "\nSorry the engine is already off";
+      std::cout << "\nSorry the engine is already off\n";
     }
   }
 
@@ -87,8 +89,31 @@ class Car {
 
 //primer 9
 void carClass(void) {
-		Car new_car("Blue","Honda");
-    new_car.status();
+  std::string option_string;
+  int option = -1; //declare and initialise an integer type variable
+
+  Car new_car("Blue","Honda"); //instantiate an object of class Car
+
+  do {
+    new_car.status(); //display status of the car
+    //interactive menu
+    std::cout << "\n1. Turn Engine On \n2. Turn Engine Off \n3. Lock Car \n4. Unlock Car \nPlease selet an option(or 0 to finish): ";
+    std::cin >> option_string; 
+
+    option = stoi(option_string);
+
+    switch(option) {
+      case 1: new_car.engine_on(); break;
+      case 2: new_car.engine_off(); break;
+      case 3: new_car.locked(true); break;
+      case 4: new_car.locked(false); break;
+      default:
+			std::cout << "\n'" << option << "' is an invalid option  - please try again.";
+			break;
+    }
+
+  } while (option != 0);
+    
 }
 
 
