@@ -7,56 +7,53 @@ int passwordChecker(std::string pass) {
 
   for(int i = 0; i < pass.length(); i++) {
 
-    if(std::isdigit(pass[i])) {
-
+    if(std::isdigit(pass[i])) { //if the char is a digit then increase numOfDigitChar by 1
       numOfDigitChar++;
-
-    } else if (std::isalpha(pass[i])) {
-
+    } else if (std::isalpha(pass[i])) {//if the char is an alphabet then increase numOfAlphaChar by 1
       numOfAlphaChar++;
-
-    } else {
-
+    } else { //if the char is neither a digit nor an alphabet then increase numOfSpecialChar by 1
       numOfSpecialChar++;
-
     }
   }
-  std::cout << "\nnumber of digit: " << numOfDigitChar;
-  std::cout << "\nnumber of alpha: " << numOfAlphaChar;
-  std::cout << "\nnumber of special: " << numOfSpecialChar;
+  //this blocks checks the rules specified in the document and sets the 'value' to the relevant number
   if ( pass.length() >= 8 && numOfDigitChar >= 2 && numOfAlphaChar >= 4 && numOfSpecialChar >= 1 ){
     value = 4;
-  }
-  
-  if ( pass.length() >= 8 && numOfDigitChar >= 2 && numOfAlphaChar >= 4){
+  }else if ( pass.length() >= 8 && numOfDigitChar >= 2 && numOfAlphaChar >= 4){
     value = 3;    
-  }
-
-  if( pass.length() >= 4 ){
+  }else if ( pass.length() >= 4 && numOfAlphaChar > 0 && numOfDigitChar > 0 ){
     value = 2;
-  }
-
-  if ( numOfAlphaChar > 0 || numOfDigitChar > 0 ) {
+  }  else {
     value = 1;
   }
-
 
   return value;
 }
 
 void passwordComplexityChecker(void) {
+
   std::string password;
-  int passwordStrength = -1;
-	std::cout << "PLease enter a password: ";
-  std::getline(std::cin, password);
-  passwordStrength = passwordChecker(password);
-  std::cout <<"\npassword strength: " << passwordStrength;
-  switch(passwordStrength) {
-    case 2: std::cout << "\nThe password \' " << password <<" \' is Moderate"; break;
-    case 3: std::cout << "\nThe password \' " << password <<" \' is Strong"; break;
-    case 4: std::cout << "\nThe password \' " << password <<" \' is Very Strong"; break;
-    default: std::cout << "\nThe password \' " << password <<" \' is Weak"; break;
-  }
+  int passwordStrength = 0;	
+
+  do { //this will keep asking to enter a password till at least a password of moderate strength is entered
+    std::cout << "\nRules of password strength:";
+    std::cout << "\nOnly numeric or only alphabets: WEAK.";
+    std::cout << "\nAt least 4 characters (a combination of numeric and alphabets): MODERATE";
+    std::cout << "\nAtleast 8 characters; at least 2 numeric and at least 4 alphabets: STRONG";
+    std::cout << "\nAtleast 8 characters; at least 2 numeric and at least 4 alphabets and 1 special character: VERY STRONG"<< std::endl;
+    std::cout << "\nPLease enter a password: ";
+    std::getline(std::cin, password);
+
+    passwordStrength = passwordChecker(password);
+
+    switch(passwordStrength) {
+    case 2: std::cout << "\nThe password \' " << password <<" \' is Moderate\n"; break;
+    case 3: std::cout << "\nThe password \' " << password <<" \' is Strong\n"; break;
+    case 4: std::cout << "\nThe password \' " << password <<" \' is Very Strong\n"; break;
+    default: std::cout << "\nThe password \' " << password <<" \' is Weak\n"; break;
+    }
+
+  } while(passwordStrength <= 1);
+  
   
 }
 
