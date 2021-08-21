@@ -1,10 +1,10 @@
 //helper function to convert Fahrenheit to C
-float fToC(float f){
+float fToC(float f) {
   return ((f - 32) * 5 / 9);
 }
 
 //helper function to convert Celsius to F
-float cToF(float c){
+float cToF(float c) {
   return ((c * 9 / 5) + 32);
 }
 
@@ -26,16 +26,16 @@ void fahrenheitCentigradeConversion(void) {
   std::cin >> option;
   t = stof(temperature);
 
-  if (option == 'c' || option == 'C'){
+  if (option == 'c' || option == 'C') {
     std::cout << "Your choice: " << option;
     c = fToC(t);
     std::cout<<"\n" << t <<" Fahrenheit is " << c << " degrees\n";
 
-  }else if (option == 'f' || option == 'F'){
+  } else if (option == 'f' || option == 'F') {
     std::cout << "Your choice: " << option; 
     f = cToF(t);
      std::cout<<"\n" << t <<" degrees is " << f << " Fahrenheit\n";
-  }else{
+  } else {
     std::cout << "please enter valid \n";
   }  
 }
@@ -55,7 +55,7 @@ void selfServiceCheckout(void) {
       std::cout<<"Please enter a quantity for item " << i <<" (or 0 to finish): \n";    
       std::cin >> quantity;
 
-      if(quantity > 0){
+      if(quantity > 0) {
       std::cout<<"Please enter item " << i <<" cost: \n";
       std::cin >> cost;
       subTotal = subTotal + (quantity * cost);
@@ -72,8 +72,6 @@ void selfServiceCheckout(void) {
 
   total = subTotal + shoppingTax;
   std::cout << "\nTotal: "<< std::fixed << total <<std::endl; 
-
-
-    
+      
 }
 
