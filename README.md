@@ -15,7 +15,27 @@ The biggest issue was related to testing the areas my solution failed, originall
 
 ### Primer 2 - Self-service Checkout
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac elit in magna porttitor convallis. Ut eu justo rutrum, luctus lorem a, pretium quam. Sed ut commodo lectus. Vestibulum ut ligula lorem. Nulla mattis varius ex ac luctus. Aenean nec laoreet enim. Sed lorem erat, vestibulum ut faucibus vel, pellentesque nec felis. Vivamus metus tellus, pretium eu sodales interdum, fringilla ut mauris. ....
+### Primer 9 - Car Class
+This chanllenge requires us to allow a user to select an option from the provided menu to do one of the following:
+* Turn Engine On
+* Turn Engine Off 
+* Lock Car
+* Unlock Car
+If the Engine is already off and the user selects the option to turn it off then a message should be displayed which tells that the engine is already off. 
 
+I created a car class with the required attributes and methods which are as follows (taken from the provided document):
+* void set_colour(string) – used to set the car’s colour, e.g., Blue, White, etc.
+* string get_colour(void) – returns the car’s colour
+* void set_make(string) – used to set the car’s make, e.g., Toyota, Honda, Ford, Kia, etc,
+* string get_make(void) – returns the car’s make
+* void engine_on(void) – used to turn the car’s engine on
+* void engine_off(void) – used to turn the car’s engine off
+* void locked(bool) – locks / unlocks the car.
+* void status(void) – displays the car’s current status (see example output below)
+
+#### Reflection (as well as issues, challenges & resolutions)
+For this primer I had to look up how to set default values if no parameters were passed. That would especially be useful if the programme needs to be extended. Use of constructors also made the programme quite flexible. Instead of initialising private variables, using setters proved to be more flexible and easy to handle the code. 
+It was important to understand exactly what the requirements were and to spend some time thinking how to tackle the primer. Creating pure functions, for example, for turning on the engine or turning off the engine also helped write clean code.  
 ### Primer 10 - Area of
 This challenge requires us to calculate area of 3 out of the 5 specific shape types from the list: rectangles, circles, squares, triangles or trapezoids. 
 
