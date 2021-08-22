@@ -132,15 +132,21 @@ class AreaOf {
     std::cout << "\nDestroyed";
   }
 
-  float size(float a) {
+  float size(float a) {//method to calculate area of square
     return a * a;
   }  
+
+  float size(float w, float l) {//method to calculate area of rectangle
+    return w * l;
+  }
+
 
 };
 
 
 void areaOf(void) {
-  AreaOf square;
+  AreaOf quadrilateral;
   
-	std::cout << "\nArea of Square (a = 6.1) : " << square.size(6.1);  
+	std::cout << "\nArea of Square (a = 6.1) : " << quadrilateral.size(6.1);  
+  std::cout << "\nArea of Rectangle (w = 4, l =5.9) : " << quadrilateral.size(4,5.9);
 }
