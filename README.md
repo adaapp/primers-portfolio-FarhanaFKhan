@@ -16,8 +16,19 @@ The biggest issue was related to testing the areas my solution failed, originall
 ### Primer 2 - Self-service Checkout
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac elit in magna porttitor convallis. Ut eu justo rutrum, luctus lorem a, pretium quam. Sed ut commodo lectus. Vestibulum ut ligula lorem. Nulla mattis varius ex ac luctus. Aenean nec laoreet enim. Sed lorem erat, vestibulum ut faucibus vel, pellentesque nec felis. Vivamus metus tellus, pretium eu sodales interdum, fringilla ut mauris. ....
 
-..  
-..  
+### Primer 10 - Area of
+This challenge requires us to calculate area of 3 out of the 5 specific shape types from the list: rectangles, circles, squares, triangles or trapezoids. 
+
+As part of the challenge we had to apply the one of the four rules of object oriented programming - polymorphism. 
+
+To complete this challenge I created a class AreaOf and overloaded the size method. I chose to calculate area of square, rectangle and trapezoid. 
+
+#### Reflection (as well as issues, challenges & resolutions)
+The biggest challenge for me while solving this primer was to understand the specifications/brief. I went down the route of creating a super class of AreaOf and created derived classes of individual shapes (square, rectangle, etc). Only after revisting the brief and reading it a couple more times did I understand the requirement. I think, this could partially be because I decided to work on this primer on a Sunday afternoon. Once I fully understood what I was asked in the brief, it didn't take long to write the code. This builds on what we had disscussed all through the week that we need to spend time thinking on the problem and understand it first and then try to hack around a solution.
+Another issue that I faced was calculating area of shapes with same size. For example, square and circle require only one parameter to calculate its area and similarly, rectangle and triangle require two parameters. Circle and square would have the same method signature:
+~~~
+float size(float x);
+~~~
 
 ---
 ## Section 2 - Programming Paradigms
