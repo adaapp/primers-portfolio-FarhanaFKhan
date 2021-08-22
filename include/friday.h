@@ -140,6 +140,11 @@ class AreaOf {
     return w * l;
   }
 
+  float size(float b,float h,float a) {
+    float result = 0.5 * (a + b) * h;
+    return result;
+  }
+
 
 };
 
@@ -148,5 +153,6 @@ void areaOf(void) {
   AreaOf quadrilateral;
   
 	std::cout << "\nArea of Square (a = 6.1) : " << quadrilateral.size(6.1);  
-  std::cout << "\nArea of Rectangle (w = 4, l =5.9) : " << quadrilateral.size(4,5.9);
+  std::cout << "\nArea of Rectangle (w = 4, l = 5.9) : " << quadrilateral.size(4,5.9);
+  std::cout << "\nArea of Trapezoid (b = 14, h = 7.5, a = 6) : " << quadrilateral.size(14,7.5,6);
 }
