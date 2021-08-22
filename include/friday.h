@@ -1,8 +1,7 @@
-// car class
+// car class-primer 9
 //attributes: colour, make, engineOn, locked
 //methods: set and get make, colour, turn off and on engine, lock and unlock car
 //status of the car also needs to displayed
-
 class Car {
   private:
   std::string car_colour;
@@ -11,14 +10,14 @@ class Car {
   bool is_car_locked = false;
 
   public:
-  Car() {
+  Car() {//constructor without any paramaters
     std::cout <<"\nCreated";
     set_colour();
     set_make();
     engine_off();
   }
 
-  Car(std::string colour, std::string make) {
+  Car(std::string colour, std::string make) { //constructor based on two paramaters
     set_colour(colour);
     set_make(make);
   }
@@ -26,23 +25,23 @@ class Car {
     std::cout <<"\nDestroyed";
   }
 
-  void set_colour(std::string colour = "Black") {
+  void set_colour(std::string colour = "Black") {// method to set colour
     car_colour = colour;
   }
 
-  std::string get_colour(void) {
+  std::string get_colour(void) {//method to get colour
     return car_colour;
   }
 
-  void set_make(std::string make = "Audi") {
+  void set_make(std::string make = "Audi") {//method to set make
     car_make = make;
   }
 
-  std::string get_make(void) {
+  std::string get_make(void) {//method to get make
     return car_make;
   }
 
-  void engine_on(void) {
+  void engine_on(void) {//method to turn engine on, if its already on then show relevent message
     if(is_engine_on) {
       std::cout << "\nSorry the engine is already on\n";
     } else {
@@ -51,7 +50,7 @@ class Car {
     }    
   }
 
-  void engine_off(void) {
+  void engine_off(void) {//method to switch engine off, if its already off then show relevent message
     if(is_engine_on) {
       is_engine_on = false;
     } else {
@@ -59,7 +58,7 @@ class Car {
     }
   }
 
-  void locked(bool is_locked) {
+  void locked(bool is_locked) {//method to locj or unlock car
     if(is_locked && !is_car_locked) { //want to lock the unlocked car
       is_car_locked = true;
       std::cout << "\nThe car is locked\n";
@@ -74,7 +73,7 @@ class Car {
 
   }
 
-  void status(void) {
+  void status(void) {//method to display status
     std::string engine_status = "Off";
     std::string lock_status = "Unlocked";
 
@@ -109,7 +108,7 @@ void carClass(void) {
 
     option = stoi(option_string);
 
-    switch(option) {
+    switch(option) {//code block to output relevant message depending on the value of the option
       case 1: new_car.engine_on(); break;
       case 2: new_car.engine_off(); break;
       case 3: new_car.locked(true); break;
@@ -123,7 +122,25 @@ void carClass(void) {
     
 }
 
+//class AreaOf-primer 10
+class AreaOf {
+  public:
+  AreaOf(){
+    std::cout << "\nCreated.";
+  }
+  ~AreaOf(){
+    std::cout << "\nDestroyed";
+  }
+
+  float size(float a) {
+    return a * a;
+  }  
+
+};
+
 
 void areaOf(void) {
-		std::cout << " - areaOf: not yet implemented\n\n";
+  AreaOf square;
+  
+	std::cout << "\nArea of Square (a = 6.1) : " << square.size(6.1);  
 }
