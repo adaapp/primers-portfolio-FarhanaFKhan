@@ -58,6 +58,24 @@ Simply put, a programming paradigm, for example, procedural, object-oriented, fu
 ---
 ## Section 3 - Continued Professional Development
 ### Benefits of becoming a Polyglot Programmer
-Vestibulum vitae semper sem. Duis leo leo, suscipit at felis non, pellentesque varius massa. Sed sit amet orci nibh. Morbi scelerisque faucibus elit, vitae mollis turpis finibus eget. In convallis euismod nunc non imperdiet. Duis ultricies pulvinar lorem, sed molestie nunc porta at. Aenean arcu ante, efficitur nec felis sed, feugiat iaculis turpis. Vestibulum eu elementum diam. Quisque nec tortor auctor, scelerisque ante vitae, fringilla tellus.
+The word 'polyglot' is derieved from the Greek which means 'many tongues' and refers to someone who is multilingual (Meduim.com, 2021). Hence, a polyglot programmer is a person who can code in different programming languages. However, it is considered best to stick to one langugage at the begining. Only when you have a good grasp over one language then explore other languages.
 
-Quisque ligula lectus, efficitur quis malesuada sit amet, malesuada sed nibh. In lorem erat, elementum quis tempus nec, rhoncus ac ante. Mauris suscipit massa tempor, pulvinar neque vel, gravida nulla. Donec massa diam, molestie in diam nec, vulputate faucibus ligula. Aliquam erat volutpat. Aliquam sit amet dui ligula. Nullam euismod eros ultrices magna convallis lobortis. Proin convallis placerat tincidunt. Quisque interdum, nisi id egestas luctus, augue libero lacinia urna, sit amet tempus nisl sem nec quam. Vestibulum interdum urna mauris, vel dignissim nisi dignissim egestas. Donec volutpat dictum dui, at egestas sem tristique nec.
+In a programming career, junior developers are often advised: A true coder is programming language independent (Magnet,2021).
+There are a number of benefits of being a polyglot programmer:
+* **Higher Adaptability** : We live in an era of immense technological advancement. New tools and frameworks come out quite frequently. If we get stuck with one language then it would be difficult for us to quickly adapt to new development trends quickly which could lead to technical debt for our business.
+
+* **More Creativity**: Learning different languages exposes us to different ways of solving a problem. When we learn a new langugage, especially after our first, it forces us to crtically think about the similarities and difference between them and to adopt best practices of the both . That in turn helps us write to write clean and efficient code.
+
+* ** Increased Empolyability**: Being a polyglot programmer can significantly increase our employability. It can also help us progress in our careers.
+
+On the other hand, there are a few challenges of becoming a polyglot programmer as well. Such as: 
+* **Lack of proficiency**: If you keeping oscillating between one language and the other without first understanding the ins and outs of the first, chances are you are going to run into issues regarding things like proformance and security (Kothari, 2018).
+
+* **Developer fatigue**: In this ever-changing, fast-paced world of tech, it can be exhausting to try and adapt to new languages constantly. It is important to pick and choose your battles rather than becoming a jack of all trades.
+
+Being a polyglot programmer is a great skill to have under your belt, despite its challenges. It not only helps approach business problems in different ways but also helps provide a deeper understanding of what computing is really about.
+
+#### Refrence list
+*Kothari, A., 2018. Do you need to be a polyglot to be a great programmer? | Packt Hub. [online] Packt Hub. Available at: <https://hub.packtpub.com/do-you-need-to-be-polyglot-great-programmer/> [Accessed 23 August 2021].
+* Magnet, P., 2021. How to Become a Polyglot Programmer. [online] levelup.gitconnected.com. Available at: <https://levelup.gitconnected.com/how-to-become-a-polyglot-programmer-fff48562e708> [Accessed 23 August 2021].
+* Medium.com. 2021. What is a Polyglot Programmer — And Why You Should Become One. [online] Available at: <https://medium.com/@guestposts_92864/what-is-a-polyglot-programmer-and-why-you-should-become-one-e5629bf720c2> [Accessed 23 August 2021].
