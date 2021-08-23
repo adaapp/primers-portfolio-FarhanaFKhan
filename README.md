@@ -53,7 +53,15 @@ float size(float x);
 ---
 ## Section 2 - Programming Paradigms
 ### Programming Paradigms
-Simply put, a programming paradigm, for example, procedural, object-oriented, functional, structured, declarative, imperative and event driven can be described as a specific approach used when trying to solve a problem.  Although many programming languages can (and do) support multiple paradigms this discussion will focus more specifically on the possible benefits with examples of the potential differences and similarities of five from the above list. These are ...
+Programming paradigm is an approach to solve problems using a programming langugae or tools and techniques available to us (GeeksforGeeks, 2021). The problem should be solved in such a way that it's complexity is broken down and the solution that is implemented is simple and elegant. Martin Fowler (1999), quite eloquently put that thought into words:
+>Any fool can write code that a computer can understand. Good programmers write code that humans can understand.
+
+However, Saying that is easy, putting it to practice is another story. 
+
+Simply put, a programming paradigm, for example, procedural, object-oriented, functional, structured, declarative, imperative and event driven can be described as a specific approach used when trying to solve a problem.  Although many programming languages can (and do) support multiple paradigms this discussion will focus more specifically on the possible benefits with examples of the potential differences and similarities of five from the above list. 
+
+This section looks at the following paradigms:
+
 
 ---
 ## Section 3 - Continued Professional Development
@@ -75,7 +83,12 @@ On the other hand, there are a few challenges of becoming a polyglot programmer 
 
 Being a polyglot programmer is a great skill to have under your belt, despite its challenges. It not only helps approach business problems in different ways but also helps provide a deeper understanding of what computing is really about.
 
+
+
+
 #### Refrence list
+* Fowler, M., Beck, K., Becker, P., Brant, J. and Opdyke, W., 1999. Refactoring: Improving the Design of Existing Code.. 1st ed. Addison-Wesley.
+* GeeksforGeeks. 2021. Introduction of Programming Paradigms - GeeksforGeeks. [online] Available at: <https://www.geeksforgeeks.org/introduction-of-programming-paradigms/> [Accessed 23 August 2021].
 *Kothari, A., 2018. Do you need to be a polyglot to be a great programmer? | Packt Hub. [online] Packt Hub. Available at: <https://hub.packtpub.com/do-you-need-to-be-polyglot-great-programmer/> [Accessed 23 August 2021].
 * Magnet, P., 2021. How to Become a Polyglot Programmer. [online] levelup.gitconnected.com. Available at: <https://levelup.gitconnected.com/how-to-become-a-polyglot-programmer-fff48562e708> [Accessed 23 August 2021].
 * Medium.com. 2021. What is a Polyglot Programmer — And Why You Should Become One. [online] Available at: <https://medium.com/@guestposts_92864/what-is-a-polyglot-programmer-and-why-you-should-become-one-e5629bf720c2> [Accessed 23 August 2021].
