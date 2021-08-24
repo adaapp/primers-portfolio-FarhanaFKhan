@@ -20,6 +20,13 @@ Primer 5 requires us to allow a user to search a record from an external file by
 #### Reflection (as well as issues, challenges & resolutions)
 The primer brief only asked to search the records using either the full name or the telephone number. In my programme, however, the user can type in just the first name as well and the record would be displayed if it exists. 
 I wanted to expand on that to provide the functionality to able to search a record by entering only the last name as well but time was a constraint. I also wanted to explore how I could tackle records that had the same first name. At this point the programme is not capable to deal with that.
+The programme could be improved by seperating out the search functionality from the read function. 
+### Primer 6 - Data file parser
+The primer requires us to write a programme that reads data from an external file and display it in a particular way set out in the document.
+The data in the file stores the first name but the output needs to convert that into initial and add '£' infront of the salary value.
+
+#### Reflection (as well as issues, challenges & resolutions)
+Figuring out how to store each value into a variable that could be accessed later was fairly straightforward. Especially after the the previous challenge and primer 4. I just reused the concepts(stringstream and vector) from those two challenges. The most time I spent on this primer was to figure out to use setw. I even wrote a function to get the maximum length of the surname so that value could be dynamically be passed into setw function rather hardcoding it. Even though the displayed format looks quite close to the requirements, I think there is some room for improvement. 
 ### Primer 7 - Sleep timer
 This challenge requires us to write a blocking function that would have a default value of 10 seconds of no parameter is passed. 
 This challenge was quite straightforward. 
