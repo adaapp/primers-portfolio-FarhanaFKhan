@@ -13,7 +13,8 @@ void sleepTimer(void) {
 
 //primer 8
 //thread1 is initialised after 5 seconds by calling the sleep now function,
-//then thread2 is initialised. join() pauses the main thread and waits till thread1 and thread 2 complete execution.
+//then thread2 is initialised.
+// join() pauses the main thread and waits till thread1 and thread 2 complete execution.
 
 const int t1 = 5;
 const int t2 = 10;
@@ -33,11 +34,11 @@ void joinDetachThreads(void) {
   
 	std::cout <<"\nMain thread: "<< std::this_thread::get_id() << " started\n";
 
-  std::thread thread1(&timer1);
+  std::thread thread1(&timer1); 
   std::thread thread2(&timer2);  
 
-  thread1.join();
-  thread2.join();
+  thread1.join();//blocks the main thread until thread1 has finished execution
+  thread2.join();//blocks the main thread until thread2 has finished execution
 
-  std::cout <<"Main thread: "<< std::this_thread::get_id() << " ended\n";
+  std::cout <<"\nMain thread: "<< std::this_thread::get_id() << " ended\n";
 }

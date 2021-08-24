@@ -1,3 +1,4 @@
+//helper function for error handling
 bool fileExists(std::string filename){
   struct stat buf;
   if(stat(filename.c_str(), &buf) == 0){
@@ -27,11 +28,12 @@ void read(std::string file, std::string& searchTerm){
 
   while(!fileObject.eof()){
     getline(fileObject,line);
-    lineNumber++;
+    lineNumber++; //this variable keeps track of number of lines in the file. this is later used to print out the number of records being searched.
 
     //use stringstream to parse the csv. used stringstream twice to first parse full name and phone number and then to get the first name
 
-    std::stringstream iss(line);
+    std::stringstream iss(line);//two different stringstream variables are created to store full name in one and just the first name in the other.
+    //so that the record can be searched either by entering the full name or just the first name
     std:: stringstream ss(line);
     std::getline(iss, fullName, ',');
     std::getline(iss, phoneNumber);
@@ -54,7 +56,7 @@ void read(std::string file, std::string& searchTerm){
   }
   fileObject.close();
 }
-
+//primer 5
 void phoneDirectory(void) {
   std::string searchWord;
 
@@ -64,7 +66,7 @@ void phoneDirectory(void) {
   read("phonedirectory.csv", searchWord);
 }
 
-
+//primer 6
 void dataFileParser(void) {
   std::string line;
   std::ifstream fileObject;
@@ -77,6 +79,7 @@ void dataFileParser(void) {
   std::vector<int> salary;
   int maxNameLength = 0;
 
+  //error handling
   if(!fileExists(file)){
     std::cout << "\nInvalid file!"<<std::endl;
   }
@@ -85,6 +88,7 @@ void dataFileParser(void) {
   fileObject.open(file);
   while(!fileObject.eof()){
     getline(fileObject,line);
+    //use stringstream to parse data and store in variables
     std::stringstream iss(line);
     std::getline(iss, fname, ',');
     std::getline(iss, sname, ',');
@@ -92,7 +96,6 @@ void dataFileParser(void) {
     initial.push_back(fname[0]);
     surname.push_back(sname);
     salary.push_back(tempSalary);
-    //std::cout << "\n" << tempSalary;
   }
   //find the longest last name for setw parameter. so it doesnt need to be hard coded
   for(int i = 0; i < surname.size(); i++){
@@ -102,8 +105,7 @@ void dataFileParser(void) {
       maxNameLength = tempLength;
     }
   }
-  //std::cout << "Max length: " << maxNameLength<< std::endl;
-
+  //write output in the column format as per the requirement document
   std::cout << "Initial " << std::setw(12) << "Last" << std::setw(14) << "Salary\n";
   std::cout << "-------"<< std::setw(14)<< "-------"<< std::setw(14)<< "-------\n";
   for(int i = 0; i < initial.size(); i++){

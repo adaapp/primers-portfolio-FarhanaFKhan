@@ -15,9 +15,20 @@ The biggest issue was related to testing the areas my solution failed, originall
 
 ### Primer 2 - Self-service Checkout
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac elit in magna porttitor convallis. Ut eu justo rutrum, luctus lorem a, pretium quam. Sed ut commodo lectus. Vestibulum ut ligula lorem. Nulla mattis varius ex ac luctus. Aenean nec laoreet enim. Sed lorem erat, vestibulum ut faucibus vel, pellentesque nec felis. Vivamus metus tellus, pretium eu sodales interdum, fringilla ut mauris. ....
+### Primer 5 - Phone Directory
+Primer 5 requires us to allow a user to search a record from an external file by entering either the full name or the contact number. If the number or name is entered it should display the number of records in the file and the details of the record(name and phone number) if it exists in the file. Otherwise display the message that the details weren't found.
+#### Reflection (as well as issues, challenges & resolutions)
+The primer brief only asked to search the records using either the full name or the telephone number. In my programme, however, the user can type in just the first name as well and the record would be displayed if it exists. 
+I wanted to expand on that to provide the functionali
+### Primer 7 - Sleep timer
+This challenge requires us to write a blocking function that would have a default value of 10 seconds of no parameter is passed. 
+This challenge was quite straightforward. 
 ### Primer 8 - Joining & Detaching Threads
-Primer 8 requires us to initialise two threads, each with a unique timer function. The two threads needed to be initialised at different times which were predefined. 
-We had to make use of asynchronous funtions. 
+Primer 8 requires us to initialise two threads, each with a unique timer function. The two threads needed to be initialised at different times which were predefined. Thread 1 with a timer of 5 seconds and thread 2 with a timer of 10 seconds. 
+We had to make use of blocking function.
+#### Reflection (as well as issues, challenges & resolutions)
+The challenge I faced was to figure out how to set different times for each thread. Then I recalled from the lectures from the week that we should create pure functions that can be reused. As we had to create a sleep timer in primer 7, I realised I could use the sleepnow function in my timer function without duplicating the code.
+
 
 ### Primer 9 - Car Class
 This chanllenge requires us to allow a user to select an option from the provided menu to do one of the following:
