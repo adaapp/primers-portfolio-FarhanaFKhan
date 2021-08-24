@@ -8,37 +8,36 @@ void sleepTimer(void) {
 	sleepnow();
 }
 
-//creating a thread
-void thread1(){
-  
-  std::cout << "\nThread 1: "<< std::this_thread::get_id() <<" started\n";
-  sleepnow(5);
-  std::cout << "\nThread 1: "<< std::this_thread::get_id() <<" ended\n";
-  
-}
 
-void thread2(){
-  
-  std::cout << "\nThread 2: "<< std::this_thread::get_id() <<" started\n";
-  sleepnow();
-  std::cout << "\nThread 2: "<< std::this_thread::get_id() <<" ended\n";
-  
-}
+
 
 //primer 8
 //thread1 is initialised after 5 seconds by calling the sleep now function,
 //then thread2 is initialised. join() pauses the main thread and waits till thread1 and thread 2 complete execution.
+
+const int t1 = 5;
+const int t2 = 10;
+
+void timer1() {
+  std::cout << "\nThread 1: "<< std::this_thread::get_id() <<" started\n";
+  sleepnow(t1);
+  std::cout << "\nThread 1: "<< std::this_thread::get_id() <<" ended\n";
+}
+
+void timer2() {
+  std::cout << "\nThread 2: "<< std::this_thread::get_id() <<" started\n";
+  sleepnow(t2);
+  std::cout << "\nThread 2: "<< std::this_thread::get_id() <<" ended\n";
+}
 void joinDetachThreads(void) {
   
 	std::cout <<"\nMain thread: "<< std::this_thread::get_id() << " started\n";
 
-  sleepnow(5);
+  std::thread thread1(&timer1);
+  std::thread thread2(&timer2);  
 
-  std::thread t1(&thread1);
-  std::thread t2(&thread2);  
-
-  t1.join();
-  t2.join();
+  thread1.join();
+  thread2.join();
 
   std::cout <<"Main thread: "<< std::this_thread::get_id() << " ended\n";
 }

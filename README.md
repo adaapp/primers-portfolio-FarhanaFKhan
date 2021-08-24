@@ -15,6 +15,10 @@ The biggest issue was related to testing the areas my solution failed, originall
 
 ### Primer 2 - Self-service Checkout
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac elit in magna porttitor convallis. Ut eu justo rutrum, luctus lorem a, pretium quam. Sed ut commodo lectus. Vestibulum ut ligula lorem. Nulla mattis varius ex ac luctus. Aenean nec laoreet enim. Sed lorem erat, vestibulum ut faucibus vel, pellentesque nec felis. Vivamus metus tellus, pretium eu sodales interdum, fringilla ut mauris. ....
+### Primer 8 - Joining & Detaching Threads
+Primer 8 requires us to initialise two threads, each with a unique timer function. The two threads needed to be initialised at different times which were predefined. 
+We had to make use of asynchronous funtions. 
+
 ### Primer 9 - Car Class
 This chanllenge requires us to allow a user to select an option from the provided menu to do one of the following:
 * Turn Engine On
