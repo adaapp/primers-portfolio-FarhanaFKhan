@@ -19,7 +19,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac elit in magn
 Primer 5 requires us to allow a user to search a record from an external file by entering either the full name or the contact number. If the number or name is entered it should display the number of records in the file and the details of the record(name and phone number) if it exists in the file. Otherwise display the message that the details weren't found.
 #### Reflection (as well as issues, challenges & resolutions)
 The primer brief only asked to search the records using either the full name or the telephone number. In my programme, however, the user can type in just the first name as well and the record would be displayed if it exists. 
-I wanted to expand on that to provide the functionali
+I wanted to expand on that to provide the functionality to able to search a record by entering only the last name as well but time was a constraint. I also wanted to explore how I could tackle records that had the same first name. At this point the programme is not capable to deal with that.
 ### Primer 7 - Sleep timer
 This challenge requires us to write a blocking function that would have a default value of 10 seconds of no parameter is passed. 
 This challenge was quite straightforward. 
