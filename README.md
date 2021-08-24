@@ -11,12 +11,20 @@ To help complete this challenge I needed to break the overall problem down into 
 * Create a method to convert C->F
  
 #### Reflection (as well as issues, challenges & resolutions)
-The biggest issue was related to testing the areas my solution failed, originally, I tested to see if it worked - however, it wasn’t until I tried to break it that I found some of the more serious issues with my design and implementation.  For example, ...
+The biggest issue was related to testing the areas my solution failed, originally, I tested to see if it worked - however, it wasn’t until I tried to break it that I found some of the more serious issues with my design and implementation.  For example, the programme crashed when string was entered as input instead of float. Then I used try/catch block of code. What it does is, it prevents the programme from crashing and displays the exception on the console.
 
 ### Primer 2 - Self-service Checkout
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac elit in magna porttitor convallis. Ut eu justo rutrum, luctus lorem a, pretium quam. Sed ut commodo lectus. Vestibulum ut ligula lorem. Nulla mattis varius ex ac luctus. Aenean nec laoreet enim. Sed lorem erat, vestibulum ut faucibus vel, pellentesque nec felis. Vivamus metus tellus, pretium eu sodales interdum, fringilla ut mauris. ....
+This challenge requires us to allow the user to input number of items and their cost unless they terminate it by inputting 0. The programme should then calculate the sub total and apply a fixed shopping tax on it and then add those two values together to display the total amount.
+#### Reflection (as well as issues, challenges & resolutions)
+The first thing that needed to figure out was how to loop through the prompts to keep asking for inputs unless 0 was entered. That was solved using do while loop. 
+I also thought about abstracting the following piece of code into its own pure function:
+```
+subTotal = subTotal + (quantity * cost);
+```
+but then I realised that sometimes that approach is not the most efficient way forward.
+I enjoyed the calculations required as part of the challenge. 
 ### Primer 3- Password Complexity Checker
-Promer 3 requires us to write a programme that allows a user to input a password and to check its complexity. As per the requirements, there can be four levels of complexity- weak, moderate, strong and very strong.
+Primer 3 requires us to write a programme that allows a user to input a password and to check its complexity. As per the requirements, there can be four levels of complexity- weak, moderate, strong and very strong.
 #### Reflection (as well as issues, challenges & resolutions)
 The programme that I wrote keeps asking for a password until it's complexity is 'weak'.
 A helper function 'passwordChecker' was created to abstract the mechanism behind checking the complexity.

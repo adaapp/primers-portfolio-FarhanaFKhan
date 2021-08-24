@@ -24,20 +24,26 @@ void fahrenheitCentigradeConversion(void) {
   std::cout << "Press F to convert from Celsius to Fahrenheit \n";
   
   std::cin >> option;
-  t = stof(temperature);
+  try {
+    t = stof(temperature);
 
-  if (option == 'c' || option == 'C') {
-    std::cout << "Your choice: " << option;
-    c = fToC(t);
-    std::cout<<"\n" << t <<" Fahrenheit is " << c << " degrees\n";
-
-  } else if (option == 'f' || option == 'F') {
-    std::cout << "Your choice: " << option; 
-    f = cToF(t);
-     std::cout<<"\n" << t <<" degrees is " << f << " Fahrenheit\n";
-  } else {
-    std::cout << "please enter valid \n";
-  }  
+    if (option == 'c' || option == 'C') {
+      std::cout << "Your choice: " << option;
+      c = fToC(t);
+      std::cout<<"\n" << t <<" Fahrenheit is " << c << " degrees\n";
+      } else if (option == 'f' || option == 'F') {
+        std::cout << "Your choice: " << option; 
+        f = cToF(t);
+        std::cout<<"\n" << t <<" degrees is " << f << " Fahrenheit\n";
+        } else {
+        std::cout << "please enter valid \n";
+        //throw(std::exception e);
+        }
+  }
+  catch(const std::exception& e){
+    std::cout << "\nInvalid input error..." << e.what()<< std::endl;
+  }
+  
 }
 
 //Primer 2
@@ -71,7 +77,7 @@ void selfServiceCheckout(void) {
   std::cout << "\nShopping tax: "<< std::setprecision(2) << shoppingTax;
 
   total = subTotal + shoppingTax;
-  std::cout << "\nTotal: "<< std::fixed << total <<std::endl; 
+  std::cout << "\nTotal: £"<< std::fixed << total <<std::endl; 
       
 }
 
