@@ -73,10 +73,12 @@ int findEmployee(std::vector<std::string> emp, std::string name){
   }
 }
 
+
 void employeeListRemoval(void) {
 	
   //store names of employess in a vector as it is easier to manipulate than an array in C++
   std::string employeeToRemove;
+  bool isNumeric = true;
   int isEmployee;
 
   std::vector<std::string> employees = {"John Smith", "Jaelynn Stuart", "Kaley Barajas","Walter Collier", "Cale Myers"};
@@ -85,9 +87,9 @@ void employeeListRemoval(void) {
   for(int i; i < employees.size(); i++){
     std::cout << employees[i] << "\n";
   }  
-
+  
   std::cout << "\nEnter an employee name to remove: ";
-  std::getline(std::cin,employeeToRemove);
+  std::getline(std::cin,employeeToRemove); 
 
   isEmployee = findEmployee(employees, employeeToRemove);
 

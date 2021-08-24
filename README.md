@@ -15,6 +15,11 @@ The biggest issue was related to testing the areas my solution failed, originall
 
 ### Primer 2 - Self-service Checkout
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac elit in magna porttitor convallis. Ut eu justo rutrum, luctus lorem a, pretium quam. Sed ut commodo lectus. Vestibulum ut ligula lorem. Nulla mattis varius ex ac luctus. Aenean nec laoreet enim. Sed lorem erat, vestibulum ut faucibus vel, pellentesque nec felis. Vivamus metus tellus, pretium eu sodales interdum, fringilla ut mauris. ....
+### Primer 4 - Employee List Removal
+This challenge requires us to display a list of employee names and allow a user to input the name of an employee that they want to remove.
+#### Reflection (as well as issues, challenges & resolutions)
+Figuring out how to store the names of the employees was the most challenging part of this primer. I started off by exploring arrays as a data structure to store the names of the employees. But removing an element from the array without knowing it's size was not possible. Hence, I decided to use vector to store the names. 
+The programme needs input validation to see whether the input provided by the user is a string or not. 
 ### Primer 5 - Phone Directory
 Primer 5 requires us to allow a user to search a record from an external file by entering either the full name or the contact number. If the number or name is entered it should display the number of records in the file and the details of the record(name and phone number) if it exists in the file. Otherwise display the message that the details weren't found.
 #### Reflection (as well as issues, challenges & resolutions)
