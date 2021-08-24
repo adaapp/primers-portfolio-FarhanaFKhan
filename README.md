@@ -15,6 +15,12 @@ The biggest issue was related to testing the areas my solution failed, originall
 
 ### Primer 2 - Self-service Checkout
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac elit in magna porttitor convallis. Ut eu justo rutrum, luctus lorem a, pretium quam. Sed ut commodo lectus. Vestibulum ut ligula lorem. Nulla mattis varius ex ac luctus. Aenean nec laoreet enim. Sed lorem erat, vestibulum ut faucibus vel, pellentesque nec felis. Vivamus metus tellus, pretium eu sodales interdum, fringilla ut mauris. ....
+### Primer 3- Password Complexity Checker
+Promer 3 requires us to write a programme that allows a user to input a password and to check its complexity. As per the requirements, there can be four levels of complexity- weak, moderate, strong and very strong.
+#### Reflection (as well as issues, challenges & resolutions)
+The programme that I wrote keeps asking for a password until it's complexity is 'weak'.
+A helper function 'passwordChecker' was created to abstract the mechanism behind checking the complexity.
+The programme makes use of switch statements as they are more efficient than if statements.
 ### Primer 4 - Employee List Removal
 This challenge requires us to display a list of employee names and allow a user to input the name of an employee that they want to remove.
 #### Reflection (as well as issues, challenges & resolutions)
