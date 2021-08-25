@@ -11,10 +11,10 @@ To help complete this challenge I needed to break the overall problem down into 
 * Create a method to convert C->F
  
 #### Reflection (as well as issues, challenges & resolutions)
-The biggest issue was related to testing the areas my solution failed, originally, I tested to see if it worked - however, it wasn’t until I tried to break it that I found some of the more serious issues with my design and implementation.  For example, the programme crashed when string was entered as input instead of float. Then I used try/catch block of code. What it does is, it prevents the programme from crashing and displays the exception on the console.
+The biggest issue was related to testing the areas my solution failed, originally, I tested to see if it worked - however, it wasn’t until I tried to break it that I found some of the more serious issues with my design and implementation.  For example, the program crashed when string was entered as input instead of float. Then I used try/catch block of code. What it does is, it prevents the program from crashing and displays the exception on the console.
 
 ### Primer 2 - Self-service Checkout
-This challenge requires us to allow the user to input number of items and their cost unless they terminate it by inputting 0. The programme should then calculate the sub total and apply a fixed shopping tax on it and then add those two values together to display the total amount.
+This challenge requires us to allow the user to input number of items and their cost unless they terminate it by inputting 0. The program should then calculate the sub total and apply a fixed shopping tax on it and then add those two values together to display the total amount.
 #### Reflection (as well as issues, challenges & resolutions)
 The first thing that needed to figure out was how to loop through the prompts to keep asking for inputs unless 0 was entered. That was solved using do while loop. 
 I also thought about abstracting the following piece of code into its own pure function:
@@ -24,24 +24,24 @@ subTotal = subTotal + (quantity * cost);
 but then I realised that sometimes that approach is not the most efficient way forward.
 I enjoyed the calculations required as part of the challenge. 
 ### Primer 3- Password Complexity Checker
-Primer 3 requires us to write a programme that allows a user to input a password and to check its complexity. As per the requirements, there can be four levels of complexity- weak, moderate, strong and very strong.
+Primer 3 requires us to write a program that allows a user to input a password and to check its complexity. As per the requirements, there can be four levels of complexity- weak, moderate, strong and very strong.
 #### Reflection (as well as issues, challenges & resolutions)
-The programme that I wrote keeps asking for a password until it's complexity is 'weak'.
+The program that I wrote keeps asking for a password until it's complexity is 'weak'.
 A helper function 'passwordChecker' was created to abstract the mechanism behind checking the complexity.
-The programme makes use of switch statements as they are more efficient than if statements.
+The program makes use of switch statements as they are more efficient than if statements.
 ### Primer 4 - Employee List Removal
 This challenge requires us to display a list of employee names and allow a user to input the name of an employee that they want to remove.
 #### Reflection (as well as issues, challenges & resolutions)
 Figuring out how to store the names of the employees was the most challenging part of this primer. I started off by exploring arrays as a data structure to store the names of the employees. But removing an element from the array without knowing it's size was not possible. Hence, I decided to use vector to store the names. 
-The programme needs input validation to see whether the input provided by the user is a string or not. 
+The program needs input validation to see whether the input provided by the user is a string or not. 
 ### Primer 5 - Phone Directory
 Primer 5 requires us to allow a user to search a record from an external file by entering either the full name or the contact number. If the number or name is entered it should display the number of records in the file and the details of the record(name and phone number) if it exists in the file. Otherwise display the message that the details weren't found.
 #### Reflection (as well as issues, challenges & resolutions)
-The primer brief only asked to search the records using either the full name or the telephone number. In my programme, however, the user can type in just the first name as well and the record would be displayed if it exists. 
-I wanted to expand on that to provide the functionality to able to search a record by entering only the last name as well but time was a constraint. I also wanted to explore how I could tackle records that had the same first name. At this point the programme is not capable to deal with that.
-The programme could be improved by seperating out the search functionality from the read function. 
+The primer brief only asked to search the records using either the full name or the telephone number. In my program, however, the user can type in just the first name as well and the record would be displayed if it exists. 
+I wanted to expand on that to provide the functionality to able to search a record by entering only the last name as well but time was a constraint. I also wanted to explore how I could tackle records that had the same first name. At this point the program is not capable to deal with that.
+The program could be improved by seperating out the search functionality from the read function. 
 ### Primer 6 - Data file parser
-The primer requires us to write a programme that reads data from an external file and display it in a particular way set out in the document.
+The primer requires us to write a program that reads data from an external file and display it in a particular way set out in the document.
 The data in the file stores the first name but the output needs to convert that into initial and add '£' infront of the salary value.
 
 #### Reflection (as well as issues, challenges & resolutions)
@@ -75,7 +75,7 @@ I created a car class with the required attributes and methods which are as foll
 * void status(void) – displays the car’s current status (see example output below)
 
 #### Reflection (as well as issues, challenges & resolutions)
-For this primer I had to look up how to set default values if no parameters were passed. That would especially be useful if the programme needs to be extended. Use of constructors also made the programme quite flexible. Instead of initialising private variables, using setters proved to be more flexible and easy to handle the code. 
+For this primer I had to look up how to set default values if no parameters were passed. That would especially be useful if the program needs to be extended. Use of constructors also made the program quite flexible. Instead of initialising private variables, using setters proved to be more flexible and easy to handle the code. 
 It was important to understand exactly what the requirements were and to spend some time thinking how to tackle the primer. Creating pure functions, for example, for turning on the engine or turning off the engine also helped write clean code.  
 ### Primer 10 - Area of
 This challenge requires us to calculate area of 3 out of the 5 specific shape types from the list: rectangles, circles, squares, triangles or trapezoids. 
@@ -101,7 +101,21 @@ However, Saying that is easy, putting it to practice is another story.
 
 Simply put, a programming paradigm, for example, procedural, object-oriented, functional, structured, declarative, imperative and event driven can be described as a specific approach used when trying to solve a problem.  Although many programming languages can (and do) support multiple paradigms this discussion will focus more specifically on the possible benefits with examples of the potential differences and similarities of five from the above list. 
 
-This section looks at the following paradigms:
+There are two broad types of programming paradigms -  imperative and declarative. 
+* **Imperative Paradigm**: Imperative programming is a programming paradigm that uses statements that change a program's state. An example of imperative paradigm is listening to Marry Berry to tell you how to bake a cake. She will be giving step by step directions to get that moist sponge. 
+Examples of imperative programming languages are Fortan, Pascal, C
+* **Declarative Paradigm**: Declarative paradigm expresses the logic of a computation without describing its control flow (Mundy, 2017). In declarative programming languages a program specifies what is to be done rather than how to do it (Encyclopedia Britannica,2021). Building on the previous example, declarative paradigm would not tell each and every step of how to bake a cake. If someone asks you to bake a cake, you can bake it however you like. 
+
+Let's consider a coding related example: 
+If you use DOM to chane the colour of a button from red to blue, you would have to specify exactly everything, step by step.That is an example of imperative paradigm. However, if React is use to do the same task then it would declare an element( button in this case) that would be rendered. That is an example of declarative paradigm. 
+
+* **Object oriented Programming Paradigm**: This paradigm falls under the umberella of imperative programming. OOP paradigm is based on the concept of "objects" which can contain data and code. These objects are entities that encapsulate both data and behaviour. Some examples of OOP programming languages are C++, Java, C#. 
+
+* **Procedural Paradigm**: Procedural Programming paradigm can be defined as a programming model which is based on calling procedures. Procedures, also known as routines or functions are a series of computational steps that need to be carried out. Thus, this paradigm also come under imperative programming.
+
+
+* **Functional Paradigm**: It is a programming paradigm where programs are constructed by applying and composing functions. This paradigm implements mathematical functions. These functions are pure functions, which means they do not cause any observable side effects such as modifying a global object. Functional programming is a type of declarative paradigm.
+
 
 
 ---
@@ -128,8 +142,10 @@ Being a polyglot programmer is a great skill to have under your belt, despite it
 
 
 #### Refrence list
+* Encyclopedia Britannica. 2021. Declarative language | computer language. [online] Available at: <https://www.britannica.com/technology/declarative-language> [Accessed 25 August 2021].
 * Fowler, M., Beck, K., Becker, P., Brant, J. and Opdyke, W., 1999. Refactoring: Improving the Design of Existing Code.. 1st ed. Addison-Wesley.
 * GeeksforGeeks. 2021. Introduction of Programming Paradigms - GeeksforGeeks. [online] Available at: <https://www.geeksforgeeks.org/introduction-of-programming-paradigms/> [Accessed 23 August 2021].
 *Kothari, A., 2018. Do you need to be a polyglot to be a great programmer? | Packt Hub. [online] Packt Hub. Available at: <https://hub.packtpub.com/do-you-need-to-be-polyglot-great-programmer/> [Accessed 23 August 2021].
 * Magnet, P., 2021. How to Become a Polyglot Programmer. [online] levelup.gitconnected.com. Available at: <https://levelup.gitconnected.com/how-to-become-a-polyglot-programmer-fff48562e708> [Accessed 23 August 2021].
 * Medium.com. 2021. What is a Polyglot Programmer — And Why You Should Become One. [online] Available at: <https://medium.com/@guestposts_92864/what-is-a-polyglot-programmer-and-why-you-should-become-one-e5629bf720c2> [Accessed 23 August 2021].
+* Mundy, I., 2017. Declarative vs Imperative Programming. [online] codeburst.io. Available at: <https://codeburst.io/declarative-vs-imperative-programming-a8a7c93d9ad2> [Accessed 25 August 2021].
